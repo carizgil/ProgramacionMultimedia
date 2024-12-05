@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./estilos/estilo.css">
+    <title>Juego de Memoria</title>
+</head>
+<body>
+    <div id="game-container">
+        <div id="timer">120 segundos restantes</div>
+        <form id="settingsForm">
+            <label for="name">Tu Nombre:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="timeInput">Tiempo (en segundos):</label>
+            <input type="number" id="timeInput" min="1" value="120">
+
+            <label for="color">Color de la Carta:</label>
+            <input type="color" id="color" name="color" value="#333">
+        </form>
+
+        <div id = "manejarAudio">
+            <div id="volumeControls">
+                <label for="volumeSlider">Volumen:</label>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="0.5" onchange="ajustarVolumen(this.value)">
+                <label for="panSlider">Estéreo:</label>
+                <input type="range" id="panSlider" min="-1" max="1" step="0.01" value="0" onchange="ajustarEstereo(this.value)">
+                <div id="frequencyControl">
+                    <label for="frequencySlider">Frecuencia:</label>
+                    <input type="range" id="frequencySlider" min="20" max="20000" step="1" value="1000" onchange="ajustarFrecuencia(this.value)">
+                </div>
+            </div>
+
+            <button id="toggleSoundButton" onclick="alternarSonido()">Sonido on</button>
+        </div>
+
+        <div>
+            <button type="button" onclick="iniciarJuego()">Iniciar Juego</button>
+            <button type="button" onclick="pausarJuego()">Pausar</button>
+            <button type="button" onclick="resumenJuego()">Reanudar</button>
+            <button type="button" onclick="revelarCartas()">Revelar Cartas</button>
+        </div>
+
+        <div id="info">
+            <h2>Información del Jugador</h2>
+            <p id="playerName"></p>
+            <p id="errorCount">Errores: 0</p>
+        </div>
+
+        <canvas id="memoryCanvas" width="400" height="400"></canvas>
+
+        <audio id="backgroundSound">
+            <source src="./audios/fondo.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+    <script src = "./js/scriptJuego.js"></script>
+</body>
+</html>

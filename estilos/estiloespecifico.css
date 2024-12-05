@@ -1,0 +1,69 @@
+/*Responsive*/
+@media screen and (max-width: 760px) {
+
+	nav ul{
+		display: flex; 
+		flex-wrap: wrap; 
+		align-items: center;
+		flex-direction: column;
+	}
+
+    .inicio-productos{
+		flex-direction: column;
+	}
+
+	.inicio-empresa{
+		flex-direction: column-reverse;
+	}
+
+	.inicio-contacto{
+		flex-direction: column;
+	}
+
+	.empresaincio{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.contactoinicio{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.productosinicio{
+		width: 100%;
+		margin-bottom: 30px;
+	}
+
+	.div-imag{
+		width: 100%;
+		height: 100%;
+	}
+
+    .titulocontacto{
+        font-size: 30px;
+    }
+
+    .tituloempresa{
+        font-size: 30px;
+    }
+
+    .tituloproductos{
+        font-size: 30px;
+    }
+ 
+    .texto-productos{
+        font-family: Roboto Slap;
+        font-size: 18px;
+    }
+
+    .texto-empresa{
+        font-family: Roboto Slap;
+        font-size: 18px;
+    }
+
+    .texto-contacto{
+        font-family: Roboto Slap;
+        font-size: 18px;
+    }
+}

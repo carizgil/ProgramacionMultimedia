@@ -1,0 +1,551 @@
+body{
+	margin:0;
+}
+
+/*Index.html*/
+.banner{
+	width: 100%;
+    height: 500px;
+}
+
+nav {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #2D572C;   
+	padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+nav ul {
+	justify-content: center;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+nav li{
+	margin: 0 10px;
+}
+
+nav ul li a{
+	color: white;
+	text-decoration: none;
+	font-family :'Times New Roman', Times, serif;
+	font-size: 24px;
+	display: block;
+	padding: 20px;
+}
+
+nav ul li a:hover {
+	color:white;
+	text-decoration: none;	
+	opacity: 50%;
+	font-family:  Georgia, serif;
+}
+
+/*footer*/
+
+.redes-footer{
+	color: white;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+}
+
+.nombre-footer{
+	color: white;
+	font-size: 20px;
+}
+
+footer{
+    background-color: #2D572C; 
+	padding: 40px 0;
+	text-align: center;
+	width: 100%;
+}
+
+/*Inicio.html*/
+.contacto-footer{
+	margin: 0 18px;
+	font-size: 18px;
+	color:white;
+	text-decoration: none;
+}
+
+.contacto-footer:hover{
+	color:white;
+	text-decoration: none;	
+	opacity: 50%;
+}
+
+.carousel-item {
+	position: relative;
+}
+
+.boton {
+	border-radius: 20px;
+	opacity: 1;
+	background-color: #2D572C;
+	text-align: center;
+	width: 200px;
+	height: 50px;
+	position: absolute;
+	bottom: 50px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 2; 
+}
+
+.boton:hover{
+	width: 220px;
+	height: 60px;
+	opacity: 0.9;
+}
+
+.boton a{
+	opacity: 1;
+	color:black;
+	font-weight: bold;
+}
+
+.boton a:hover{
+	text-decoration: none;
+	opacity: 1;
+	color:black;
+	font-weight: bold;
+}
+
+/*Página de Libors*/
+.pagina-productos{
+	width: 100%;
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.caja img{
+	margin-top: 30px;
+	margin-bottom: 10px;
+	width: 200px;
+	height: 280px; 	
+}
+
+.caja{
+	color:black;
+	border: 2px solid #35cf87;
+	border-radius: 25px;
+	margin: 40px;
+	text-align: center;
+}
+
+.precio{
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.a{
+	margin-bottom: 20px;
+}
+
+.caja h3{
+	font-weight: bold;
+	color:black;
+}
+
+.titulo-productos p{
+	text-align: center;
+	font-size: 20px;
+	font-style:italic;
+}
+
+.titulo-productos{
+	text-align: center;
+	font-weight: bold;
+	padding-top: 50px;
+	font-size: 30px;
+}
+
+.letra-comprar{
+	background-color: #35cf87;
+	padding:10px;
+    border-radius: 10px;
+	font-size: 17px;
+	text-decoration: none;
+	color: black;
+}
+
+.letra-comprar:hover{
+	opacity:95%;
+	color:black;
+	text-decoration: none;
+}
+
+/*nostros.html*/
+.div-imag{
+	width: 50%;
+}
+
+.div-imag img{
+	width: 100%;
+	opacity: 0.8;
+}
+
+.cuerpoinicio{
+	background-color: #0a8d50;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+.inicio-productos{
+	align-items: center;
+	display: flex;
+}
+
+.productosinicio{
+	text-align: center;
+	font-size: 30px;
+	width: 50%;
+}
+
+.tituloproductos{
+	font-family:Montserrat;
+	text-align: center;
+	font-size: 50px;
+}
+
+.texto-productos{
+	font-family: Roboto Slap;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+.letra-boton-inicio{
+	padding: 10px 20px;
+	background-color: #2D572C; 
+	font-size: 25px;
+	border: solid black 1px;
+	border-radius: 30px;
+	color:white;
+	font-family :'Times New Roman', Times, serif;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.letra-boton-inicio:hover{
+	color:white;
+	text-decoration: none;
+	font-size: 27px;
+}
+
+.inicio-empresa{
+	margin-top: 20px;
+	margin-bottom: 20px;
+	align-items: center;
+	display: flex;
+}
+
+.empresaincio{
+	width: 50%;
+	text-align: center;
+	font-size: 30px;
+}
+
+.texto-empresa{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	font-family: Roboto Slap;
+}
+
+.tituloempresa{
+	font-family:Montserrat;
+	text-align: center;
+	font-size: 50px;
+}
+
+.inicio-contacto{
+	align-items: center;
+	display: flex;
+}
+
+.contactoinicio{
+	width: 50%;
+	text-align: center;
+	font-size: 30px;
+}
+
+.titulocontacto{
+	font-family:Montserrat;
+	text-align: center;
+	font-size: 50px;
+}
+
+.texto-contacto{
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+	font-family: Roboto Slap;
+}
+
+/*Contactanos*/
+.titulo-contactanos p{
+	text-align: center;
+	font-size: 20px;
+	font-style:italic;
+}
+
+.titulo-contactanos{
+	text-align: center;
+	font-weight: bold;
+	padding-top: 50px;
+	font-size: 30px;
+}
+
+.formulario-cont{
+	margin-left: 100px;
+}
+
+/*Libro-Audio*/
+
+.titulo-audio{
+	text-align: center;
+	font-weight: bold;
+	padding-top: 50px;
+	font-size: 30px;
+}
+
+.titulo-audio p{
+	text-align: center;
+	font-size: 20px;
+	font-style:italic;
+	margin-bottom: 50px;
+}
+
+.elegir-audio{
+	text-align: center;
+}
+
+.boton-verde {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+	border-radius: 5px; 
+}
+
+.reproducir-audio{
+	border-radius: 5px;
+	text-align: center;
+}
+
+.boton-verde:hover {
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+}
+
+.reproducir-audio div{
+	margin-bottom: 50px;
+}
+
+.centrar-contenido {
+	text-align: center;
+}
+/*Novedades*/
+.boton-verde {
+	color: #fff;
+	background-color: #28a745;
+	border-color: #28a745;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.boton-verde:hover {
+	color: #fff;
+	background-color: #218838;
+	border-color: #1e7e34;
+}
+
+.centrar-contenido {
+	text-align: center;
+}
+
+.video-container {
+	max-width: 800px;
+	margin: auto;
+}
+
+#video {
+	width: 100%;
+	border: 2px solid green;
+}
+
+
+#progressBar {
+	width: 05%;
+}
+
+#infoReproduccion{
+	margin-bottom: 50px;
+}
+
+/*Contacto*/
+.mapa-contacto {
+    text-align: center;
+    margin-top: 200px;
+    height: 400px;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+/*Juego*/
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+	margin: 0;
+	padding: 0;
+}
+
+#game-container {
+	margin-top: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #fff;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+#timer {
+	background-color: #333;
+	padding: 15px 20px;
+	color: white;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	font-size: 24px;
+	text-align: center;
+	width: 300px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="color"] {
+	padding: 10px;
+	margin: 5px 0;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 200px;
+	font-size: 16px;
+}
+
+label {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+button {
+	padding: 10px 20px;
+	margin: 5px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #333;
+	color: white;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+button:hover {
+	background-color: #555;
+}
+
+#info {
+	margin-top: 20px;
+	padding: 20px;
+	border-radius: 10px;
+	border: 2px solid #333;
+	text-align: center;
+	width: 300px;
+}
+
+#info h2 {
+	margin-bottom: 10px;
+}
+
+canvas {
+	margin-top: 20px;
+}
+
+#manejarAudio {
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: 2px solid #333;
+	border-radius: 10px;
+	width: 300px;
+	margin-bottom: 20px;
+}
+
+#manejarAudio label {
+	margin-top: 10px;
+	font-size: 18px;
+}
+
+#volumeControls,
+#frequencyControl {
+	margin-top: 10px;
+}
+
+#toggleSoundButton {
+	padding: 10px 20px;
+	margin-top: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: #333;
+	color: white;
+	font-size: 16px;
+	transition: background-color 0.3s;
+}
+
+#toggleSoundButton:hover {
+	background-color: #555;
+}
+
+.titulo-d3{
+	color: green;
+	text-align: center;
+	font-size: 3em;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltip {
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    background: #f9f9f9;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 0;
+}

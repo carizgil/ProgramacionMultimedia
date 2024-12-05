@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Mostrar Datos</title>
+        <link rel="stylesheet" type="text/css" href="./estilos/estilo.css">
+        <script type="text/javascript" src="https://d3js.org/d3.v5.min.js"></script>
+    </head>
+    <body>
+        <h1 class = "titulo-d3">Datos de las Ciudades donde más leen</h1>
+        <div id="chart"></div>
+        <script type="text/javascript">
+            var w = 500;
+            var h = 500;
+            
+            var outerRadius = 300 / 2;
+            var innerRadius = 100;
+            var arc = d3.arc()
+                .innerRadius(innerRadius)
+                .outerRadius(outerRadius);
+                
+            var color = d3.scaleOrdinal(d3.schemeDark2);
+
+            var tooltip = d3.select("body").append("div")
+        .attr("class", "tooltip")
+        .style("opacity", 0);
+            
+            d3.select("#chart svg").remove();
+
+            var svg = d3.select("#chart")
+                .append("svg")
+                .attr("width", w)
+                .attr("height", h);
+            
+            d3.csv("data.csv").then(function(dataset) {
+                dataset.forEach(function(d) {
+                    d.value = +d.value;
+                });
+
+                var pie = d3.pie().value(function(d){return d.value});
+
+                var arcs = svg.selectAll("g.arc")
+                    .data(pie(dataset))
+                    .enter()
+                    .append("g")
+                    .attr("class", "arc")
+                    .attr("transform", "translate(" + (outerRadius + 50) + "," + (outerRadius + 50) + ")");
+                    
+                arcs.append("path")
+                    .attr("fill", function(d, i) {
+                        return color(i);    
+                    })
+                    .attr("d", arc)
+                    .on("mouseover", function(d) {
+                        d3.select(this)
+                            .transition()
+                            .duration(200)
+                            .attr("d", d3.arc()
+                                .innerRadius(innerRadius)
+                                .outerRadius(outerRadius + 15));
+                    })
+                    .on("mouseout", function(d) {
+                        d3.select(this)
+                            .transition()
+                            .duration(200)
+                            .attr("d", arc);
+                    });
+                    
+                    arcs.append("text")
+            .attr("transform", function(d) {
+                return "translate(" + arc.centroid(d) + ")";
+            })
+            .attr("text-anchor", "middle")
+            .text(function(d, i) {
+                return dataset[i].label;
+            })
+            .on("mouseover", function(d, i) {
+                tooltip.transition()
+                    .duration(200)
+                    .style("opacity", .9);
+                tooltip.html("Personas que leen: " + dataset[i].value)
+                    .style("left", (d3.event.pageX) + "px")
+                    .style("top", (d3.event.pageY - 28) + "px");
+            })
+            .on("mouseout", function(d) {
+                tooltip.transition()
+                    .duration(500)
+                    .style("opacity", 0);
+            });
+                });
+        </script>
+    </body>
+</html>
